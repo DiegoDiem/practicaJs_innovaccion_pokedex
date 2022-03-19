@@ -1,0 +1,244 @@
+:root {
+    --font-family:'Roboto', sans-serif;;
+
+    --gris:#DEDEDE;
+    --blanco:#ffffff;
+    --negro:#000000;
+    --rojo:#DD082F;
+    --azul:#0BCDFF;
+    --azul-second:#31A7F1;
+    --rojo-second:#ED0705;
+    --amarillo:#DFE415;
+    --negro-second:#262626;
+    --verde:#55AB62;
+
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem=10px*/
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 2;
+    height: 100vh;
+    background-color: #e5e5f7;
+    background-image: radial-gradient(circle at center center, #ffdcdc, #e5e5f7), repeating-radial-gradient(circle at center center, #ffdcdc, #ffdcdc, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
+}
+/** Globales*/
+.contenedor{
+    /*
+    max-width: 120rem;
+    width: 90%;
+    Usar min en una sola linea equivale a lo mismo de acá*/
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size:4rem ;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 120%;
+}
+.card-rojo{
+    background-color: var(--rojo);
+    height: 550px;
+    width: 400px;
+    margin: 5% auto;
+    border-radius: 10px 0 0 10px;
+    
+    border: 2px solid var(--negro-second);
+    border-right: 10px solid var(--negro);
+}
+.seccion1{
+    display: flex;
+    gap: 5px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.circulo-grande{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--negro-second);
+background: #0BCDFF;
+
+}
+
+.circulo-pequeño:nth-child(2){
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+background: var(--rojo-second);
+
+border: 1px solid var(--negro-second);
+}
+.circulo-pequeño:nth-child(3){
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: var(--amarillo);
+
+border: 1px solid var(--negro-second);
+}
+.circulo-pequeño:nth-child(4){
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: var(--verde);
+
+border: 1px solid var(--negro-second);
+}
+
+.seccion2{
+    height: 300px;
+    width: 350px;
+    background-color: var(--gris);
+    margin: 25px auto;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid var(--negro);
+}
+.seccion2 .pantalla{
+    height: 260px;
+    width: 320px;
+    background-color: var(--blanco);
+    margin: 15px auto;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid var(--negro);
+}
+
+.seccion3{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+.seccion3 .circulo-mediano{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--negro-second);
+    background: var(--azul-second);
+}
+.seccion3 .ovalo:nth-child(2){
+    width: 80px;
+    height: 20px;
+    background-color: var(--verde);
+    border-radius: 10px;
+    border: 1px solid var(--negro);
+}
+.seccion3 .ovalo:nth-child(3){
+    width: 80px;
+    height: 20px;
+    background-color: var(--amarillo);
+    border-radius: 10px;
+    
+    border: 1px solid var(--negro);
+}
+.seccion3 .cruz{
+    background-color: var(--negro-second);
+    height: 90px;
+    width: 90px;
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 75%, 35% 75%, 35% 50%, 10% 50%);
+
+}
+
+.seccion4{
+    padding-left: 20px;
+    
+    margin-top: -40px;
+}
+.seccion4 .buscador{
+    background-color: var(--amarillo);
+    color: var(--negro);
+    border: 1px solid var(--blanco);
+    padding: 10px;
+    caret-color: var(--rojo-second);
+    border-radius: 10px;
+}
+.seccion4 .buscador:focus{
+    border-color: var(--negro);
+    box-shadow: 0 1px 1px var(--negro-second);
+    outline: 0 none;
+}
+
+
+.seccion4 .boton{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+background: linear-gradient(145deg, #ec0932, #c7072a);
+box-shadow:  5px 5px 10px #bc0728,
+             -5px -5px 10px #fe0936;
+    border: none;
+    color: var(--blanco);
+    margin-left: 5px;
+}
+.seccion4 .boton:hover{
+   cursor: pointer;
+   border-radius: 50%;
+background: linear-gradient(145deg, #fe0705, #d50605);
+box-shadow:  5px 5px 10px #c90604,
+             -5px -5px 10px #ff0806;
+                border: 1px solid var(--rojo-second);
+}
+
+
+/* ---- JS ---- */
+
+.alerta{
+    color: var(--rojo-second);
+    padding: 20px 0;
+    font-size: 2.8rem;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+.pantalla h3{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.display-grid{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+}
+.datos{
+    height: 100%;
+
+}
+
+.datos img{
+    width: 150%;
+    margin: 25% 0 0 0;
+}
+.datos p{
+    margin: 0;
+}
+.datos_pokemon{
+    margin-top: 10px;
+    margin-right: 5px;
+}
